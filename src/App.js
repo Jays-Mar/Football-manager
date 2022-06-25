@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { BrowserRouter as Router,  Route, Routes, Link} from "react-router-dom";
-import Login from './Vistas/Login.jsx'
+import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-dom";
+import Login from './Vistas/Login.jsx';
 
 const Elemento = () => <h1>casas</h1>
 
+/*
 const Llogin = () => {
   const login = '/login'
 
@@ -53,6 +54,7 @@ const Llogin = () => {
   )
 
 }
+*/
 
 
 function App() {
@@ -64,9 +66,9 @@ function App() {
   <nav className="navbar is-primary">
      <div className="container">
          <div className="navbar-brand">
-           <a className="navbar-item brand-text" href="../index">
+           <Link className="navbar-item brand-text" to="../index">
              Football Manager
-             </a>
+             </Link>
            <div className="navbar-burger burger" data-target="navMenu">
              <span></span>
              <span></span>
@@ -75,12 +77,12 @@ function App() {
          </div>
          <div id="navMenu" className="navbar-menu">
            <div className="navbar-start">
-             <a className="navbar-item" href="admin.">
+             <Link className="navbar-item" to="admin.">
                Home
-             </a>
-             <a className="navbar-item" href="login">
+             </Link>
+             <Link className="navbar-item" to="login">
                login
-             </a>
+             </Link>
            </div>
          </div>
      </div>
@@ -89,9 +91,8 @@ function App() {
 
   <body>
     <Routes>
-      <Route path='/login' element={ <Llogin />} />
+      <Route path='/login' element={ <Login/ >} />
       <Route path='/elemento' element={ <Elemento />} />
-      <Route path='/loginv1' element={Login} />
     </Routes>
 
     <div className="columns">
@@ -101,9 +102,9 @@ function App() {
             Datos Generales
           </p>
           <ul className="menu-list">
-            <li><a className="is-active" href='admin.html'>Administrador</a></li>
-            <li><a href='OpcionA.html'>Opcion A</a></li>
-            <li><a href='OpcionB.html'>Opcion B</a></li>
+            <li><Link className="is-active" to='admin.html'>Administrador</Link></li>
+            <li><Link to='OpcionA.html'>Opcion A</Link></li>
+            <li><Link to='OpcionB.html'>Opcion B</Link></li>
           </ul>
         </aside>
       </div>
