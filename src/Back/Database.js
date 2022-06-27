@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose')
-/*mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/test */
+
 const URI = 'mongodb://localhost:27017/Probe'
 
 
