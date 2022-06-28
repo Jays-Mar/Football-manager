@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
 
-const URI = 'mongodb://localhost:27017/Probe'
+const URI = 'mongodb+srv://<username>:<password>@basecluster.npp1vzk.mongodb.net/?retryWrites=true&w=majority'
 
 
 module.exports = () => {

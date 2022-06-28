@@ -1,14 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const path = 'user'
-const controller = require('../controllers/users')
+const controller = require('../controllers/jugadores');
 
 // // /* GET users listing. */
 // router.get('user/', function(req, res, next) {
 //   res.send('respond with a resource');
 // });
 
-router.get('/users',
+router.get('/jugadores',
     controller.getData
 )
 

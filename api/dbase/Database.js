@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 // mongodb://localhost:27017/Prueba
-const URI = 'mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/test'
+const URI = ''
 
 
 module.exports = () => {
