@@ -1,10 +1,10 @@
-const mongoose = require ('mongoose')
-// import { Int32 } from "mongodb"
-const Int32 = require('mongodb').Int32
-const { stringify } = require("xpress/lib/string")
-const { string } = require("xpress").string
+const mongoose = require ('mongoose');
+const Int32 = require("mongoose-int32").loadType(mongoose);
 
-const playerScheme = new mongoose.Schema(
+
+
+
+var PlayerScheme = new mongoose.Schema(
 
     {
         id: {
@@ -12,10 +12,12 @@ const playerScheme = new mongoose.Schema(
             unique:true
         },
         nombre: {
-            type: string
+            type: String,
+            minLength: 3
         },
         apellido: {
-            type: string
+            type: String,
+            minLength: 3
         },
         numero: {
             type:  Int32
@@ -26,8 +28,11 @@ const playerScheme = new mongoose.Schema(
         division: {
             type: Int32
         }
-
+    },
+    {
+        versionKey: false,
+        timestamps: true
     }
 )
 
-module.exports = mongoose.model( 'jugadores' ,playerScheme)
+module.exports = mongoose.model( 'jugadores' ,PlayerScheme)

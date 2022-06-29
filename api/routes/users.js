@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const path = 'user'
 const controller = require('../controllers/users')
 
 // // /* GET users listing. */

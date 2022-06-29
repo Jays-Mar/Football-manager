@@ -1,10 +1,13 @@
 
 const mongoose = require('mongoose')
 
-// mongodb://localhost:27017/Prueba
-const URI = ''
+// const URI = 'mongodb://localhost:27017/Football'
+const URI = 'mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/Base'
+// const URI = "mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/?retryWrites=true&w=majority";
+// const URI = 'mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/test'
 
 
+// Jays:302514
 module.exports = () => {
 
     const connect = () => {

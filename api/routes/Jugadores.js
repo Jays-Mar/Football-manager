@@ -11,4 +11,8 @@ router.get('/jugadores',
     controller.getData
 )
 
+router.post('/jugadores',
+    controller.insertData
+)
+
 module.exports = router
