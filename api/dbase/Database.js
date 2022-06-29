@@ -1,10 +1,7 @@
 
 const mongoose = require('mongoose')
 
-// const URI = 'mongodb://localhost:27017/Football'
-const URI = 'mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/Base'
-// const URI = "mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/?retryWrites=true&w=majority";
-// const URI = 'mongodb+srv://Jays:302514@basecluster.npp1vzk.mongodb.net/test'
+const URI = 'mongodb://localhost:27017/Football'
 
 
 // Jays:302514
