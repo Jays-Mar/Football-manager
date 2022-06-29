@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const URI = 'mongodb://localhost:27017/Football'
 
 
-// Jays:302514
+
 module.exports = () => {
 
     const connect = () => {
