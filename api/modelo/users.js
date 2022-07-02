@@ -5,11 +5,11 @@ const mongoose = require ('mongoose');
 var UsersScheme = new mongoose.Schema(
 
     {
-        name: {
+        nombre: {
             type: String,
             unique: true
         },
-        pass: {
+        contraseña: {
             type: String
         },
         tipo: {

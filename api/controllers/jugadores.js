@@ -1,3 +1,4 @@
+const { parseDateTime } = require('xpress/lib/parser')
 var modelo = require('../modelo/jugadores')
 
 exports.getData = (req, res) => {
@@ -22,3 +23,20 @@ exports.insertData = (req, res) => {
         res.send({data : docs})
     })
 }
+
+exports.updateSingle = (req, res) => {
+    const {id} = req.params
+    const body = req.body
+    model.updateOne(
+        {_id: parseId(req.params.id)},
+        {body},
+    (err,docs) => {
+        res.send({
+            items : docs
+        })
+    })
+}
+
+// exports.deleteSingle = (req, res ) => [
+
+// ]
