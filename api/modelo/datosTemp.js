@@ -1,3 +1,4 @@
+const { Timestamp } = require('mongodb');
 const mongoose = require ('mongoose');
 const Int32 = require("mongoose-int32").loadType(mongoose);
 
@@ -20,11 +21,35 @@ var TeamScheme = new mongoose.Schema(
             type: String
             
         },
+        Jornada: {
+            type: String
+        },
         Grupo: {
             type: String
         },
-        Equipo: {
+        PartidaJornada: {
+            type: Int32
+        },
+        GEquipo1: {
             type: String
+        },
+        GEquipo2: {
+            type: String
+        },
+        Equipo1: {
+            type: String
+        },
+        Equipo2: {
+            type: String
+        },
+        Campo: {
+            type: String
+        },
+        Fecha: {
+            type: Date
+        },
+        hora: {
+            type: Timestamp
         },
     },
     {
