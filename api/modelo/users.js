@@ -5,17 +5,23 @@ const mongoose = require ('mongoose');
 var UsersScheme = new mongoose.Schema(
 
     {
-        nombre: {
+        correo: {
             type: String,
             unique: true
         },
-        contraseña: {
+        usuario: {
+            type: String
+        },
+        pass: {
             type: String
         },
         tipo: {
+            type: String
+        },
+        equipo: {
             type: String
         }
     }
 )
 
-module.exports = mongoose.model( 'users' ,UsersScheme)
+module.exports = mongoose.model( 'usuario' ,UsersScheme)

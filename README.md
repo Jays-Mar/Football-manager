@@ -23,8 +23,6 @@ npm star dev
 
 
 
-////
-
 
 el proyecto tiene dos carpetas principales.
 
