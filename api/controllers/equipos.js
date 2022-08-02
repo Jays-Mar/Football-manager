@@ -10,15 +10,6 @@ exports.getData = (req, res) => {
     })
 }
 
-exports.getDatav2 = (req, res) => {
-    // res.send({data: 'viene de jugadores'})
-    modelo.find({NequiNjugador : "A15"}, (err,docs) => {
-        res.send({
-            docs
-        })
-    })
-}
-
 exports.insertData = (req, res) => {
     const data = req.body
     // res.send({data})

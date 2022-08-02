@@ -9,11 +9,12 @@ const initdb = require('./dbase/Database')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var jugadoresRouter = require('./routes/jugadores');
-
+var equiposRouter = require('./routes/equipos');
 
 //Rutas personales
 const userRouter = require ('./routes/users')
 const jugadorRouter = require ('./routes/jugadores')
+const EquipoRouter = require ('./routes/equipos')
 
 
 var app = express();
@@ -29,9 +30,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/usuario', usersRouter);
 app.use('/jugador', jugadoresRouter);
+app.use('./equipos',equiposRouter);
 app.use(userRouter);
 app.use(jugadorRouter);
+app.use(EquipoRouter);
 
 module.exports = app;

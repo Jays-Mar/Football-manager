@@ -1,9 +1,6 @@
-
 const mongoose = require('mongoose')
-
-const URI = 'mongodb://localhost:27017/Football'
-
-
+// const URI = 'mongodb://localhost:27017/Football'
+const URI = 'mongodb+srv://:302514@basecluster.npp1vzk.mongodb.net/Base'
 
 module.exports = () => {
 
@@ -17,9 +14,9 @@ module.exports = () => {
             },
             (err) => {
                 if(err){
-                    console.log('Db erro')
+                    console.log('Error de conexion a la base de datos')
                 }else {
-                    console.log('Conexion Creada')
+                    console.log('Conexion correcta a la base de datos')
                 }
             }
         )
