@@ -3,6 +3,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const passportlocal = require('passport-local').Strategy;
+
 
 const cors = require('cors');
 
@@ -29,6 +32,9 @@ var app = express();
 initdb()
 
 app.use(cors());
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 app.use(logger('dev'));
 app.use(express.json());
