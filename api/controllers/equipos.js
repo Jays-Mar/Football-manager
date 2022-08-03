@@ -1,5 +1,5 @@
 const { parseDateTime } = require('xpress/lib/parser')
-var modelo = require('../modelo/jugadores')
+var modelo = require('../modelo/equipos')
 
 exports.getData = (req, res) => {
     // res.send({data: 'viene de jugadores'})
@@ -25,11 +25,11 @@ exports.insertData = (req, res) => {
 }
 
 exports.updateSingle = (req, res) => {
-    const {id} = req.params
+    const {Npartido} = req.params
     const body = req.body
-    model.updateOne(
-        {_id: parseId(req.params.id)},
-        {body},
+    modelo.updateOne(
+        {Npartido: req.params.Npartido},
+        body,
     (err,docs) => {
         res.send({
             items : docs
@@ -37,6 +37,16 @@ exports.updateSingle = (req, res) => {
     })
 }
 
-// exports.deleteSingle = (req, res ) => [
+exports.deleteSingle = (req, res) => {
+    const {Npartido} = req.params
+    const body = req.body
+    modelo.deleteOne(
+        {Npartido: req.params.Npartido},
+        body,
+    (err,docs) => {
+        res.send({
+            items : docs
+        })
+    })
+}
 
-// ]

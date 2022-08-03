@@ -7,15 +7,12 @@ const Int32 = require("mongoose-int32").loadType(mongoose);
 // Equipo       Nombre del equipo
 
 
-var TeamScheme = new mongoose.Schema(
+var PartidoScheme = new mongoose.Schema(
 
    
 
     {
-        id: {
-            type: Int32,
-            unique:true
-        },
+        
         Categoria: {
             type: String
             
@@ -26,11 +23,38 @@ var TeamScheme = new mongoose.Schema(
         Equipo: {
             type: String
         },
+        Jugados: {
+            type: Int32
+        },
+        Ganados: {
+            type: Int32
+        },
+        Empates: {
+            type: Int32
+        },
+        Perdidos: {
+            type: Int32
+        },
+        GF: {
+            type: Int32
+        },
+        GC: {
+            type: Int32
+        },
+        DG: {
+            type: Int32
+        },
+        PTS: {
+            type: Int32
+        },
+        Npartido: {
+            type: Int32
+        }
     },
     {
         versionKey: false,
-        timestamps: true
+        timestamps: false
     }
 )
 
-module.exports = mongoose.model( 'equipos' ,TeamScheme)
+module.exports = mongoose.model( 'partidos' ,PartidoScheme)

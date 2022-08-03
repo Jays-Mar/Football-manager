@@ -10,6 +10,7 @@ const login = () =>
 <div class="hero-body">
     
     <div class="container">
+       
         <div class="columns is-centered">
             <div class="column is-4">
                 <form action="" class="box">

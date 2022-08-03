@@ -12,7 +12,7 @@ exports.getData = (req, res) => {
 
 exports.getDatav2 = (req, res) => {
     // res.send({data: 'viene de jugadores'})
-    modelo.find({NequiNjugador : "A15"}, (err,docs) => {
+    modelo.find({}, (err,docs) => {
         res.send({
             docs
         })
@@ -34,11 +34,11 @@ exports.insertData = (req, res) => {
 }
 
 exports.updateSingle = (req, res) => {
-    const {id} = req.params
+    const {NequiNjugador} = req.params
     const body = req.body
-    model.updateOne(
-        {_id: parseId(req.params.id)},
-        {body},
+    modelo.updateOne(
+        {NequiNjugador: req.params.NequiNjugador},
+        body,
     (err,docs) => {
         res.send({
             items : docs
@@ -46,6 +46,15 @@ exports.updateSingle = (req, res) => {
     })
 }
 
-// exports.deleteSingle = (req, res ) => [
-
-// ]
+exports.deleteSingle = (req, res) => {
+    const {NequiNjugador} = req.params
+    const body = req.body
+    modelo.deleteOne(
+        {NequiNjugador: req.params.NequiNjugador},
+        body,
+    (err,docs) => {
+        res.send({
+            items : docs
+        })
+    })
+}

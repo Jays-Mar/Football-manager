@@ -54,38 +54,53 @@ var PlayerScheme = new mongoose.Schema(
         Categoria: {
             type: String
         },
+        Equipo: {
+            type: String
+        },
+        Goles: {
+            type: String
+        },
         N: {
             type: Int32
         },
-        Nequipo: {
+        Nacimiento: {
             type: String
         },
-        Equipo: {
+        NequipoNjugador: {
+            type: String
+        },
+        Nequipo: {
             type: String
         },
         Njugador: {
             type: Int32
         },
-        NequiNjugador: {
-            type: String
-        },
-        nombeJugador: {
-            type: String,
-            minLength: 3
-        },
-        Nacimiento: {
-            type: Date
-        },
-        goles: {
+        Rank: {
             type: Int32
         },
-        Rank: {
+        nombreJugador: {
+            type: String
+        },
+        RematesA: {
+            type: Int32
+        },
+        Asistencias: {
+            type: Int32
+        },
+        MinutosJu: {
+            type: Int32
+        },
+        Faltas: {
             type: Int32
         }
     },
     {
         versionKey: false,
         timestamps: true
+    },
+    {
+        versionKey: false,
+        timestamps: false
     }
 )
 
