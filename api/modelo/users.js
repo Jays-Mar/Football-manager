@@ -7,7 +7,7 @@ var UsersScheme = new mongoose.Schema(
     {
         correo: {
             type: String,
-            unique: true
+            unique:true
         },
         usuario: {
             type: String
@@ -21,7 +21,11 @@ var UsersScheme = new mongoose.Schema(
         equipo: {
             type: String
         }
+    },
+    {
+        versionKey: false,
+        timestamps: false
     }
 )
 
-module.exports = mongoose.model( 'usuario' ,UsersScheme)
+module.exports = mongoose.model( 'users' ,UsersScheme)

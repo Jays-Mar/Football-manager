@@ -12,10 +12,6 @@ var TeamScheme = new mongoose.Schema(
    
 
     {
-        id: {
-            type: Int32,
-            unique:true
-        },
         Categoria: {
             type: String
             
@@ -26,10 +22,28 @@ var TeamScheme = new mongoose.Schema(
         Equipo: {
             type: String
         },
+        Gfavor: {
+            type: Int32
+        },
+        Gcontra: {
+            type: Int32
+        },
+        Tamarilla: {
+            type: Int32
+        },
+        Trojas: {
+            type: Int32
+        },
+        RematesA: {
+            type: Int32
+        },
+        TirosE: {
+            type: Int32
+        }
     },
     {
         versionKey: false,
-        timestamps: true
+        timestamps: false
     }
 )
 

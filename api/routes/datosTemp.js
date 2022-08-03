@@ -1,17 +1,21 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controllers/jugadores');
+const controller = require('../controllers/datosTemp');
 
-router.get('/equipos',
+router.get('/',
     controller.getData
 )
 
-router.post('/equipos',
+router.post('/',
     controller.insertData
 )
 
-router.put('/:id',
+router.put('/',
             controller.updateSingle
+)
+
+router.delete('/',
+            controller.deleteSingle
 )
 
 
