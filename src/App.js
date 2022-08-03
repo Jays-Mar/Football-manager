@@ -60,8 +60,11 @@ const Llogin = () => {
 */
 
 
+
 function App() {
   return (
+
+    
   <div className="App">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"></link>
 
@@ -97,7 +100,16 @@ function App() {
       
     </Routes>
 
-    
+    componentDidmount(){
+      fetch('http://localhost:5000/jugador')
+        .then( response => {return response.json(); })
+        .then(response => {
+          console.log(response);
+        })
+        .then( data => console.log(data) )
+        .catch( error => console.log(error) )
+    }
+
     {Nav()}
 
 

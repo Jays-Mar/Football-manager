@@ -4,6 +4,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 
+const cors = require('cors');
+
+const config = require('./dbase/config');
+
 const initdb = require('./dbase/Database')
 
 var indexRouter = require('./routes/index');
@@ -23,6 +27,8 @@ const DatosTempRouter = require('./routes/datosTemp')
 var app = express();
 
 initdb()
+
+app.use(cors());
 
 app.use(logger('dev'));
 app.use(express.json());
