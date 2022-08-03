@@ -21,7 +21,3 @@ router.delete('/:Npartido',
 
 module.exports = router
 
-// // /* GET users listing. */
-// router.get('user/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
