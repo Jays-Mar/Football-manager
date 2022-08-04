@@ -83,7 +83,7 @@ function App() {
          </div>
          <div id="navMenu" className="navbar-menu">
            <div className="navbar-start">
-             <Link className="navbar-item" to="admin.">
+             <Link className="navbar-item" to="home">
                Home
              </Link>
              <Link className="navbar-item" to="login">
@@ -96,7 +96,7 @@ function App() {
 
   <Routes>
       <Route path='/login' element={ <Login/ >} />
-      <Route path='/elemento' element={ <Elemento />} />
+      <Route path='/home' element={ <Elemento />} />
       
     </Routes>
 

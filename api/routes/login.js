@@ -11,23 +11,10 @@ router.get('/',
     controller.getData
 )
 
-router.get('/',
-    controller.getDatauser
-)
-
-
-
 router.post('/',
     controller.insertData
 )
 
-router.put('/:correo',
-    controller.updateSingle
-)
-
-router.delete('/:correo',
-    controller.deleteSingle
-)
 
 
 module.exports = router
