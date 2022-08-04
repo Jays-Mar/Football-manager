@@ -4,7 +4,13 @@ import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-d
 
 const login = () => 
 
-
+fetch('http://localhost:5000/jugador')
+        .then( response => {return response.json(); })
+        .then(response => {
+          console.log(response);
+        })
+        .then( data => console.log(data) )
+        .catch( error => console.log(error) )
 
 <div class="hero is-primary is-fullheight">
 <div class="hero-body">

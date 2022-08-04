@@ -24,10 +24,4 @@ module.exports = () => {
 
     connect();
 }
-// mongoose.connect(URI)
 
-// const connection = mongoose.connection;
-
-// connection.once('open', () =>{
-//     console.log('la base de datos ha sido conectada',URI)
-// })

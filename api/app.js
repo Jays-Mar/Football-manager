@@ -2,6 +2,39 @@ const express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const loginCtrl = async (req, res) => {
+  try{
+    req = matchedData(req);
+    const user = await usersModel.findOne({email:req.email})
+
+    if(!user){
+      handleHttpError(res, "USER_NOT_EXISTS", 404);
+      return
+    }
+
+    const hashPassword = user.get('password');
+
+    const check = await compare(req.password, hashPassword)
+
+    if(!check){
+      handleHttpError(res, "PASSWORD_INVALID", 401);
+      return
+    }
+
+    user.set('password', undefined, {strict:false})
+    const data = {
+      token: await tokenSign(user),
+      user
+    }
+
+    res.send({data})
+
+
+  }catch(e){
+    console.log(e)
+    handleHttpError(res, "ERROR_LOGIN_USER")
+  }
+}
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const passportlocal = require('passport-local').Strategy;
@@ -19,19 +52,27 @@ var jugadoresRouter = require('./routes/jugadores');
 var equiposRouter = require('./routes/equipos');
 var partidosRouter = require('./routes/partidos');
 var datosTempRouter = require('./routes/datosTemp');
+// var logingRouter = require('./routes/autenticar');
+
 //Rutas personales
 const userRouter = require ('./routes/users')
 const jugadorRouter = require ('./routes/jugadores')
 const EquipoRouter = require ('./routes/equipos')
 const PartidosRouter = require('./routes/partidos')
 const DatosTempRouter = require('./routes/datosTemp')
+// var LoginRouter = require('./routes/autenticar')
 
 
 var app = express();
 
 initdb()
-
+var session = require('express-session')
 app.use(cors());
+app.use(session({
+    resave: false,
+    saveUninitialized: true,
+    secret: 'bla bla bla' 
+  }));
 app.use(passport.initialize());
 app.use(passport.session());
 
