@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controllers/users')
+const controller = require('../controllers/users');
+const {loginCtrl, registerCtrl} = require("../controllers/users");
+const { validatorRegister, validatorLogin } = require("../modelo/validator");
 
 
 router.get('/',
@@ -25,12 +27,8 @@ router.delete('/:correo',
     controller.deleteSingle
 )
 
-router.post('/login',
-controller.loginCtrl
-)
+router.post("/register", validatorRegister, registerCtrl)
 
-router.post('/register',
-controller.registerCtrl
-)
+router.post("/login", validatorLogin, loginCtrl)
 
 module.exports = router

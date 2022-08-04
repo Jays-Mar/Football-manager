@@ -1,7 +1,6 @@
 const { handleHttpError } = require("../utils/handleError");
 const { verifyToken } = require("../utils/handleJwt")
 const {modelo} = require("../modelo/users")
-var session = require('express-session')
 
 
 const propertiesKey = () => {
