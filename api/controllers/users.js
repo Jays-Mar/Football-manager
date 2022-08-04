@@ -67,55 +67,67 @@ exports.deleteSingle = (req, res) => {
 
 
 exports.registerCtrl = async (req, res) => {
-    try{
-      req = matchedData(req);
-      const pass = await encrypt(req.pass);
-      const body = { ...req, pass };
-      const dataUser = await modelo.create(body);
-      dataUser.set("pass", undefined, { strict: false });
-    
-      const data = {
-        token: await tokenSign(dataUser),
-        user: dataUser,
-      };
-      res.status(201)
-      res.send({ data });
-    }catch(e){
-      console.log(e)
-      handleHttpError(res, "ERROR_REGISTER_USER")
-    }
-  };
+  try{
+    console.log("entrada")
+    console.log(req.body);
+    req = matchedData(req);
+    console.log(req);
+    const pass = await encrypt(req.pass);
+    console.log("entrada")
 
-  exports.loginCtrl = async (req, res) => {
-    try{
-      req = matchedData(req);
-      const user = await modelo.findOne({email:req.email})
+    const body = { ...req, pass };
+    console.log("entrada")
+
+    const dataUser = await modelo.create(body);
+    console.log("entrada")
+
+    dataUser.set("pass", undefined, { strict: false });
+    console.log("entrada")
+
   
-      if(!user){
-        handleHttpError(res, "USER_NOT_EXISTS", 404);
-        return
-      }
-  
-      const hashPassword = user.get('pass');
-  
-      const check = await compare(req.pass, hashPassword)
-  
-      if(!check){
-        handleHttpError(res, "PASSWORD_INVALID", 401);
-        return
-      }
-  
-      user.set('pass', undefined, {strict:false})
-      const data = {
-        token: await tokenSign(user),
-        user
-      }
-  
-      res.send({data})
-  
-  
-    }catch(e){
-      console.log(e)
-      handleHttpError(res, "ERROR_LOGIN_USER")
-    }
+    const data = {
+      token: await tokenSign(dataUser),
+      user: dataUser,
+    };
+    res.status(201)
+    res.send({ data });
+  }catch(e){
+    console.log(e)
+    handleHttpError(res, "ERROR_REGISTER_USER")
   }
+};
+
+exports.loginCtrl = async (req, res) => {
+  try{
+    req = matchedData(req);
+    const user = await modelo.findOne({correo:req.correo})
+
+    if(!user){
+      handleHttpError(res, "USER_NOT_EXISTS", 404);
+      return
+    }
+
+    const hashPassword = user.get('pass');
+
+    const check = await compare(req.pass, hashPassword)
+
+    if(!check){
+      handleHttpError(res, "PASSWORD_INVALID", 401);
+      return
+    }
+
+    user.set('pass', undefined, {strict:false})
+    const data = {
+      token: await tokenSign(user),
+      user
+    }
+
+    res.send({data})
+
+
+  }catch(e){
+    console.log(e)
+    handleHttpError(res, "ERROR_LOGIN_USER")
+  }
+}
+
