@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const controller = require('../controllers/users')
+const controller = require('../controllers/users');
+const {loginCtrl, registerCtrl} = require("../controllers/users");
+const { validatorRegister, validatorLogin } = require("../modelo/validator");
 
-// // /* GET users listing. */
-// router.get('user/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
 
 router.get('/',
     controller.getData
@@ -29,5 +27,8 @@ router.delete('/:correo',
     controller.deleteSingle
 )
 
+router.post("/register", validatorRegister, registerCtrl)
+
+router.post("/login", validatorLogin, loginCtrl)
 
 module.exports = router

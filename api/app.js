@@ -1,8 +1,46 @@
 const express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session')
+
 var logger = require('morgan');
+const loginCtrl = async (req, res) => {
+  try{
+    req = matchedData(req);
+    const user = await usersModel.findOne({email:req.email})
+
+    if(!user){
+      handleHttpError(res, "USER_NOT_EXISTS", 404);
+      return
+    }
+
+    const hashPassword = user.get('password');
+
+    const check = await compare(req.password, hashPassword)
+
+    if(!check){
+      handleHttpError(res, "PASSWORD_INVALID", 401);
+      return
+    }
+
+    user.set('password', undefined, {strict:false})
+    const data = {
+      token: await tokenSign(user),
+      user
+    }
+
+    res.send({data})
+
+
+  }catch(e){
+    console.log(e)
+    handleHttpError(res, "ERROR_LOGIN_USER")
+  }
+}
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const passportlocal = require('passport-local').Strategy;
+
 
 const cors = require('cors');
 
@@ -15,20 +53,30 @@ var usersRouter = require('./routes/users');
 var jugadoresRouter = require('./routes/jugadores');
 var equiposRouter = require('./routes/equipos');
 var partidosRouter = require('./routes/partidos');
-var datosTempRouter = require('./routes/datosTemp');
+var datosTempRouter = require('./routes/datosTempo');
+// var logingRouter = require('./routes/autenticar');
+
 //Rutas personales
 const userRouter = require ('./routes/users')
 const jugadorRouter = require ('./routes/jugadores')
 const EquipoRouter = require ('./routes/equipos')
 const PartidosRouter = require('./routes/partidos')
-const DatosTempRouter = require('./routes/datosTemp')
+const DatosTempRouter = require('./routes/datosTempo')
+// var LoginRouter = require('./routes/autenticar')
 
 
 var app = express();
 
 initdb()
-
 app.use(cors());
+app.use(session({
+    resave: false,
+    saveUninitialized: true,
+    secret: 'Secretd' 
+  }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -43,7 +91,7 @@ app.use('/usuarios', usersRouter);
 app.use('/jugador', jugadoresRouter);
 app.use('/equipos',equiposRouter);
 app.use('/partidos',partidosRouter);
-app.use('/datosTemp',datosTempRouter);
+app.use('/datosTempo',datosTempRouter);
 app.use(userRouter);
 app.use(jugadorRouter);
 app.use(EquipoRouter);
