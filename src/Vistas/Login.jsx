@@ -1,42 +1,22 @@
 import React from 'react'
 //import Nav from '../Componentes/sideBar'
-import { /*BrowserRouter as Router,  Route, Routes,*/ Link} from "react-router-dom";
+// import { /*BrowserRouter as Router,  Route, Routes,*/ Link} from "react-router-dom";
 
-const state = { dataj: [] };
-const imprimir = () => {
-    console.log("funcion")
-}
 
-const jugadores = () => {
-    fetch(`https://localhost:3000/jugador`)
-     .then((response) => response.json())
-     .then((actualData) => console.log(actualData))
-     .catch((err) => {
-      console.log(err.message);
-     });
-}
 
-const jug = () => {
-    fetch('https://httpbin.org/post', { method: 'POST', body: 'a=1' })
-        .then(res => res.json()) // expecting a json response
-        .then(json => {
-           console.log(json)
-           //window.location.href = data.redirect;
-          })
-          .then(dataj => this.setState({ dataj }))
-          .then(console.log(this.dataj));
-}
-
-const getJugadores = (() => {
+const oClick = (event) => {
+    event.preventDefault()
+    console.log("click")
     fetch(`http://localhost:5000/jugador`)
      .then((response) => response.json())
      .then((actualData) => console.log(actualData))
      .catch((err) => {
-      console.log(err.message);
-     });
-   }, []);
+              console.log(err.message);
+             })
+     
+}
 
-//onClick={console.log("click en login")}
+
 
 const login = () => 
 
@@ -48,7 +28,7 @@ const login = () =>
     <div className="container">
        
         <div className="columns is-centered">
-            <div className="column is-4">
+            <div className="column is-3">
                 <form action="" className="box">
                     <div className="field">
                         <label className="label">
@@ -77,7 +57,7 @@ const login = () =>
                         </label>
                     </div>
                     <div className="field">
-                        <button className="button is-success" onClick={jugadores}>Login</button>
+                        <button className="button is-success" onClick={oClick}>Login</button>
                     </div>
                 </form>
             </div>
@@ -85,5 +65,7 @@ const login = () =>
     </div>
 </div>
 </div>
+
+
     
 export default login
