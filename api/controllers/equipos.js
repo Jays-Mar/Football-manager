@@ -1,3 +1,4 @@
+const { get } = require('mongoose-int32')
 const { parseDateTime } = require('xpress/lib/parser')
 var modelo = require('../modelo/equipos')
 

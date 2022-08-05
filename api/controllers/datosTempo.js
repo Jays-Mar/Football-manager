@@ -1,7 +1,7 @@
 const { get } = require('mongoose-int32')
 // const { parseId  } = require('')
 const { parseDateTime } = require('xpress/lib/parser')
-var modelo = require('../modelo/datosTemp')
+var modelo = require('../modelo/datosTempo')
 
 exports.getData = (req, res) => {
     // res.send({data: 'viene de jugadores'})
@@ -15,7 +15,7 @@ exports.getData = (req, res) => {
 exports.insertData = (req, res) => {
     const data = req.body
     // res.send({data})
-
+    console.log(req.body);
     // res.send({ data })
     modelo.create(data, (err,docs) => {
         if(err){
@@ -40,10 +40,10 @@ exports.updateSingle = (req, res) => {
 }
 
 exports.deleteSingle = (req, res) => {
-    const {Npartido} = req.params
+    const {id} = req.params
     const body = req.body
     modelo.deleteOne(
-        {Npartido: req.params.Npartido},
+        {_id: parseId(req.params.id)},
         body,
     (err,docs) => {
         res.send({
