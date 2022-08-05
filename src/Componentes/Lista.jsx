@@ -2,6 +2,9 @@ import React from 'react'
 
 const Elemento = () =>
 
+<section class="section">
+<div class="columns is-centered">
+<div class="column is-narrow">
     <table className="table">
       <thead>
         <tr>
@@ -19,5 +22,8 @@ const Elemento = () =>
         </tr>
       </thead>
       </table>
+      </div>
+</div> 
+</section>
 
 export default Elemento

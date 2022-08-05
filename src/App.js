@@ -1,67 +1,27 @@
-
 import './App.css';
 import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-dom";
 import Login from './Vistas/Login.jsx';
-import Lista from './Componentes/Lista.jsx';
-import Nav from './Componentes/sideBar'
-
+import Categ8 from './Vistas/Categ8.jsx';
+import Categ9 from './Vistas/Categ9.jsx';
+import Categ10 from './Vistas/Categ10.jsx';
+import Categ11 from './Vistas/Categ11.jsx';
+import Categ12 from './Vistas/Categ12.jsx';
+import Home from './Componentes/Home';
+import DataFetching from './Componentes/DataFetching';
 
 const Elemento = () => <h1>casas</h1>
 
-/*
-const Llogin = () => {
-  const login = '/login'
-
-  return(
-    <div class="hero is-primary is-fullheight">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column is-4">
-                        <form action="" class="box">
-                            <div class="field">
-                                <label class="label">
-                                    Email
-                                </label>
-                                <div class="control has-icons-left">
-                                    <input type="email" class="input" placeholder="john@example.com"/>
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-envelope"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Password</label>
-                                <div class="control has-icons-left">
-                                    <input type="password" class="input" placeholder="john@example.com"/>
-                                    <span class="icon is-small is-left">
-                                        <i class="fa fa-lock"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">
-                                    <input type="checkbox" class="checkbox"/>
-                                    Remember me
-                                </label>
-                            </div>
-                            <div class="field">
-                                <button class="button is-success">Login</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-
-}
-*/
-
+fetch('http://localhost:5000/jugadores')
+        .then( response => {return response.json(); })
+        .then(response => {
+          console.log(response);
+        })
+        .then( data => console.log(data) )
+        .catch( error => console.log(error) )
 
 
 function App() {
+
   return (
 
     
@@ -69,53 +29,81 @@ function App() {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"></link>
 
 
-  <nav className="navbar is-primary">
+    <nav className="navbar" role="navigation" aria-label="dropdown navigation">
      <div className="container">
-         <div className="navbar-brand">
-           <Link className="navbar-item brand-text" to="../index">
-             Football Manager
-             </Link>
-           <div className="navbar-burger burger" data-target="navMenu">
+         <div className="navbar-item has-dropdown is-hoverable">
+    <a className="navbar-link">
+      CATEGORIAS
+    </a>
+
+    <div className="navbar-dropdown">
+      <a class="navbar-item">
+      <Link className="navbar-item" to="categ8">
+      Año 2014
+      </Link>
+      </a>
+      <a className="navbar-item">
+      <Link className="navbar-item" to="categ9">
+      Año 2013
+      </Link>
+      </a>
+      <a className="navbar-item">
+      <Link className="navbar-item" to="categ10">
+      Año 2012
+      </Link>
+      </a>
+      <a className="navbar-item">
+      <Link className="navbar-item" to="categ11">
+      Año 2011
+      </Link>
+      </a>
+      <a className="navbar-item">
+      <Link className="navbar-item" to="categ12">
+      Año 2010
+      </Link>
+      </a>
+      <hr className="navbar-divider"></hr>
+      </div>
+  </div>
+
              <span></span>
              <span></span>
              <span></span>
            </div>
-         </div>
          <div id="navMenu" className="navbar-menu">
-           <div className="navbar-start">
-             <Link className="navbar-item" to="admin.">
+           <div className="navbar-end">
+             <Link className="navbar-item" to="home">
                Home
              </Link>
              <Link className="navbar-item" to="login">
-               login
+               Login
+             </Link>
+             <Link className="navbar-item" to="Admin">
+               Admin
              </Link>
            </div>
          </div>
-     </div>
-  </nav>
 
+  </nav>
+  <body>
   <Routes>
       <Route path='/login' element={ <Login/ >} />
-      <Route path='/elemento' element={ <Elemento />} />
-      
+      <Route path='/categ8' element={ <Categ8/ >} />
+      <Route path='/categ9' element={ <Categ9/ >} />
+      <Route path='/categ10' element={ <Categ10/ >} />
+      <Route path='/categ11' element={ <Categ11/ >} />
+      <Route path='/categ12' element={ <Categ12/ >} />
+      <Route path='/home' element={ <Home />} />
+      <Route path='' element={ <Home />} />
     </Routes>
 
-    componentDidmount(){
-      fetch('http://localhost:5000/jugador')
-        .then( response => {return response.json(); })
-        .then(response => {
-          console.log(response);
-        })
-        .then( data => console.log(data) )
-        .catch( error => console.log(error) )
-    }
-
-    {Nav()}
-
-
+</body>
 
   </div>
   );
 }
+ <div classname='App'>
+  <DataFetching />
+ </div>
 
 export default App;

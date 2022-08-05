@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../Componentes/sideBar'
+import Nav from '../Componentes/Home'
 import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-dom";
 
 const login = () => 
@@ -10,7 +10,6 @@ const login = () =>
 <div class="hero-body">
     
     <div class="container">
-       
         <div class="columns is-centered">
             <div class="column is-4">
                 <form action="" class="box">
