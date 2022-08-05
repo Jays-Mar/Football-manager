@@ -17,11 +17,11 @@ const categ = () =>
     <div class="field">
   <div class="select">
   <select>
-    <option value="Sub07">Sub07</option>
-    <option value="Sub08">Sub08</option>
-    <option value="Sub09">Sub09</option>
-    <option value="Sub10">Sub10</option>
-    <option value="Sub11">Sub11</option>
+    <option value="Sub07">Sub 07</option>
+    <option value="Sub08">Sub 08</option>
+    <option value="Sub09">Sub 09</option>
+    <option value="Sub10">Sub 10</option>
+    <option value="Sub11">Sub 11</option>
   </select>
 </div>
   </div>

@@ -39,27 +39,27 @@ function App() {
     <div className="navbar-dropdown">
       <a class="navbar-item">
       <Link className="navbar-item" to="categ8">
-      Año 2014
+      Sub 08
       </Link>
       </a>
       <a className="navbar-item">
       <Link className="navbar-item" to="categ9">
-      Año 2013
+      Sub 09
       </Link>
       </a>
       <a className="navbar-item">
       <Link className="navbar-item" to="categ10">
-      Año 2012
+      Sub 10
       </Link>
       </a>
       <a className="navbar-item">
       <Link className="navbar-item" to="categ11">
-      Año 2011
+      Sub 11
       </Link>
       </a>
       <a className="navbar-item">
       <Link className="navbar-item" to="categ12">
-      Año 2010
+      Sub 12
       </Link>
       </a>
       <hr className="navbar-divider"></hr>
