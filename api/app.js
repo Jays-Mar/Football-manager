@@ -1,6 +1,8 @@
 const express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session')
+
 var logger = require('morgan');
 const loginCtrl = async (req, res) => {
   try{
@@ -51,7 +53,7 @@ var usersRouter = require('./routes/users');
 var jugadoresRouter = require('./routes/jugadores');
 var equiposRouter = require('./routes/equipos');
 var partidosRouter = require('./routes/partidos');
-var datosTempRouter = require('./routes/datosTemp');
+var datosTempRouter = require('./routes/datosTempo');
 // var logingRouter = require('./routes/autenticar');
 
 //Rutas personales
@@ -59,19 +61,18 @@ const userRouter = require ('./routes/users')
 const jugadorRouter = require ('./routes/jugadores')
 const EquipoRouter = require ('./routes/equipos')
 const PartidosRouter = require('./routes/partidos')
-const DatosTempRouter = require('./routes/datosTemp')
+const DatosTempRouter = require('./routes/datosTempo')
 // var LoginRouter = require('./routes/autenticar')
 
 
 var app = express();
 
 initdb()
-var session = require('express-session')
 app.use(cors());
 app.use(session({
     resave: false,
     saveUninitialized: true,
-    secret: 'bla bla bla' 
+    secret: 'Secretd' 
   }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -90,7 +91,7 @@ app.use('/usuarios', usersRouter);
 app.use('/jugador', jugadoresRouter);
 app.use('/equipos',equiposRouter);
 app.use('/partidos',partidosRouter);
-app.use('/datosTemp',datosTempRouter);
+app.use('/datosTempo',datosTempRouter);
 app.use(userRouter);
 app.use(jugadorRouter);
 app.use(EquipoRouter);

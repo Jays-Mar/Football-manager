@@ -1,4 +1,5 @@
 const { Timestamp } = require('mongodb');
+// const Timestamp = require('mongoose-Timestamp');
 const mongoose = require ('mongoose');
 const Int32 = require("mongoose-int32").loadType(mongoose);
 
@@ -26,19 +27,19 @@ var TemporadaScheme = new mongoose.Schema(
             type: Int32
         },
         GEquipo1: {
-            type: Int32
+            type: String
         },
         GEquipo2: {
-            type: Int32
+            type: String
         },
         Equipo1: {
-            type: Int32
+            type: String
         },
         Golese1: {
             type: Int32
         },
         Equipo2: {
-            type: Int32
+            type: String
         },
         Golese2: {
             type: Int32
@@ -64,7 +65,7 @@ var TemporadaScheme = new mongoose.Schema(
         TarjetasAE1: {
             type: Int32
         },
-        TarjetasAE2: {
+        TarjetasRE2: {
             type: Int32
         },
         TarjetasAE1: {
@@ -73,7 +74,11 @@ var TemporadaScheme = new mongoose.Schema(
         TarjetasRe2: {
             type: Int32
         }
+    },
+    {
+        versionKey: false,
+        timestamps: false
     }
 )
 
-module.exports = mongoose.model( 'datosTemp' ,TemporadaScheme)
+module.exports = mongoose.model( 'datosTempo' ,TemporadaScheme)
