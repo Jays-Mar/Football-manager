@@ -18,7 +18,7 @@ const oClick = (event) => {
      
 }
 
-const log = (event) => {
+const getJugadores = (event) => {
     event.preventDefault()
     console.log("click")
     fetch(`http://localhost:5000/jugador`)
@@ -29,7 +29,7 @@ const log = (event) => {
              })     
 }
 
-const logd = (event) => {
+const userLogin = (event) => {
     event.preventDefault()
     fetch('http://localhost:5000/login', {
         method: 'POST', // or 'PUT'
@@ -97,7 +97,7 @@ const [pass, setPass] = useState('');
                         </label>
                     </div>
                     <div className="field">
-                        <button className="button is-success" onClick={logd}>Login</button>
+                        <button className="button is-success" onClick={userLogin}>Login</button>
                     </div>
                 </form>
             </div>
@@ -147,7 +147,7 @@ const login = () =>
                         </label>
                     </div>
                     <div className="field">
-                        <button className="button is-success" onClick={logd}>Login</button>
+                        <button className="button is-success" onClick={userLogin}>Login</button>
                     </div>
                 </form>
             </div>
