@@ -43,7 +43,7 @@ exports.deleteSingle = (req, res) => {
     const {id} = req.params
     const body = req.body
     modelo.deleteOne(
-        {_id: parseId(req.params.id)},
+        {_id: parseId(req.body.id)},
         body,
     (err,docs) => {
         res.send({
