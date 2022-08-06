@@ -3,7 +3,8 @@ import './App.css';
 import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-dom";
 import Login from './Vistas/Login.jsx';
 //import Lista from './Componentes/Lista.jsx';
-import Nav from './Componentes/sideBar'
+import Nav from './Componentes/sideBar';
+import Control from './Vistas/controlPanel';
 
 
 const Elemento = () => <h1>casas</h1>
@@ -46,6 +47,7 @@ function App() {
   <Routes>
       <Route path='/login' element={ <Login/ >} />
       <Route path='/home' element={ <Elemento />} />
+      <Route path='/ControlPanel' element={ <Control />} />
       
     </Routes>
 
