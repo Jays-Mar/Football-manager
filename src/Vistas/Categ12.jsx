@@ -4,12 +4,12 @@ import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-d
 
 const categ12 = () => 
 
-<div class="hero is-primary is-fullheight">
+<div className="hero is-primary is-fullheight">
     
-<section class="section">
- <div class="columns is-1">
-  <div class="column is-narrow">
-  <p class="title is-2">GRUPO SUB 12 - AÑO 2010</p>
+<section className="section">
+ <div className="columns is-1">
+  <div className="column is-narrow">
+  <p className="title is-2">GRUPO SUB 12 - AÑO 2010</p>
     <table className="table">
       <thead>
         <tr>

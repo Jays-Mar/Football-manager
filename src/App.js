@@ -37,7 +37,7 @@ function App() {
     </a>
 
     <div className="navbar-dropdown">
-      <a class="navbar-item">
+      <a className="navbar-item">
       <Link className="navbar-item" to="categ8">
       Sub 08
       </Link>

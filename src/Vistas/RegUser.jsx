@@ -6,17 +6,17 @@ const regUser = () =>
 
 
 
-<div class="hero is-primary is-fullheight">
-<section class="section">
-    <div class="container">
-        <div class="columns is-left">
-            <div class="column is-4">
-            <p class="title is-2">Registrar usuario </p>
-                <form action="" class="box">
-                <div class="field">
-    <label class="label">Tipo de usuario:</label>
-    <div class="field">
-  <div class="select">
+<div className="hero is-primary is-fullheight">
+<section className="section">
+    <div className="container">
+        <div className="columns is-left">
+            <div className="column is-4">
+            <p className="title is-2">Registrar usuario </p>
+                <form action="" className="box">
+                <div className="field">
+    <label className="label">Tipo de usuario:</label>
+    <div className="field">
+  <div className="select">
   <select>
     <option value="administrador">Administrador</option>
     <option value="representante">Representante</option>
@@ -24,25 +24,25 @@ const regUser = () =>
 </div>
   </div>
   </div>
-                <div class="field">
-  <label class="label">Nombre completo</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Ejm: Sergio Pérez"></input>
+                <div className="field">
+  <label className="label">Nombre completo</label>
+  <div className="control">
+    <input className="input" type="text" placeholder="Ejm: Sergio Pérez"></input>
   </div>
 </div>
-<div class="field">
-  <label class="label">Correo electrónico</label>
-    <input class="input is-danger" type="email" placeholder="Ejm: checoperez@gmail.com" value="fulano@gmail.com"></input>
-  <p class="help is-danger">This email is invalid</p>
+<div className="field">
+  <label className="label">Correo electrónico</label>
+    <input className="input is-danger" type="email" placeholder="Ejm: checoperez@gmail.com" value="fulano@gmail.com"></input>
+  <p className="help is-danger">This email is invalid</p>
 </div>
-                    <div class="field">
-                        <label class="label">Contraseña</label>
-                            <input type="password" class="input" placeholder="***********"/>
+                    <div className="field">
+                        <label className="label">Contraseña</label>
+                            <input type="password" className="input" placeholder="***********"/>
                     </div>
-                    <div class="field">
-  <label class="label">Equipo al que pertenece:</label>
-  <div class="control">
-    <div class="select">
+                    <div className="field">
+  <label className="label">Equipo al que pertenece:</label>
+  <div className="control">
+    <div className="select">
       <select>
       <option>Equipos</option>
       <option value="MENCA SPORT">MENCA SPORT</option>
@@ -78,14 +78,14 @@ const regUser = () =>
     </div>
   </div>
 </div>
-                    <div class="field">
-                        <label class="label">
-                            <input type="checkbox" class="checkbox"/>
+                    <div className="field">
+                        <label className="label">
+                            <input type="checkbox" className="checkbox"/>
                             Remember me
                         </label>
                     </div>
-                    <div class="field">
-                        <button class="button is-success">Registrar</button>
+                    <div className="field">
+                        <button className="button is-success">Registrar</button>
                     </div>
                 </form>
             </div>

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Elemento = () =>
 
-<section class="section">
-<div class="columns is-centered">
-<div class="column is-narrow">
+<section className="section">
+<div className="columns is-centered">
+<div className="column is-narrow">
     <table className="table">
       <thead>
         <tr>

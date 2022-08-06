@@ -20,29 +20,29 @@ function Admin() {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"></link>
 
 
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-  <div class="navbar-item has-dropdown is-hoverable">
-    <a class="navbar-link">
+    <nav className="navbar" role="navigation" aria-label="dropdown navigation">
+  <div className="navbar-item has-dropdown is-hoverable">
+    <a className="navbar-link">
       OPCIONES
     </a>
     <div className="navbar-dropdown">
-      <a class="navbar-item">
+      <a className="navbar-item">
       <Link className="navbar-item" to="categ">
       Crear categorías
       </Link>
       </a>
-      <a class="navbar-item">
+      <a className="navbar-item">
       <Link className="navbar-item" to="regUser">
       Registrar usuario
       </Link>
       </a>
-      <a class="navbar-item">
+      <a className="navbar-item">
       <Link className="navbar-item" to="match">
       Crear partidos
       </Link>
       </a>
-      <hr class="navbar-divider"></hr>
-      <div class="navbar-item">
+      <hr className="navbar-divider"></hr>
+      <div className="navbar-item">
       </div>
       </div>
     </div>

@@ -6,9 +6,9 @@ import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-d
 
 const Elemento = () =>
 
-<section class="section">
- <div class="columns is-centered">
-  <div class="column is-narrow">
+<section className="section">
+ <div className="columns is-centered">
+  <div className="column is-narrow">
     <table className="table">
       <thead>
         <tr>
@@ -25,130 +25,130 @@ const Elemento = () =>
     </table>
   </div>
  </div> 
- <div class="columns is-centered">
-  <div class="column is-full">
-<table class="table">
+ <div className="columns is-centered">
+  <div className="column is-full">
+<table className="table">
       
   <thead>
-    <div class="columns is-multiline is-mobile">
-    <div class="box">
-        <div class="column is-narrow">
+    <div className="columns is-multiline is-mobile">
+    <div className="box">
+        <div className="column is-narrow">
         
           Goleadores
-          <figure class="image is-64x64">
+          <figure className="image is-64x64">
           <img src={Logo} alt="Logo" />
           </figure>
           <hr></hr>
     
           <th>01. Kristiano Bernardo </th>
-          <progress class="progress is-primary" value="100" max="100">100%</progress>
+          <progress className="progress is-primary" value="100" max="100">100%</progress>
           <th>02. Aca se importa </th>
-          <progress class="progress is-link" value="80" max="100">80%</progress>
+          <progress className="progress is-link" value="80" max="100">80%</progress>
           <th>03. Aca se importa de la BDD el siguiente</th>
-          <progress class="progress is-success" value="60" max="100">60%</progress>
+          <progress className="progress is-success" value="60" max="100">60%</progress>
           <th>04. Aca se importa de la BDD el siguiente</th>
-          <progress class="progress is-warning" value="40" max="100">40%</progress>
+          <progress className="progress is-warning" value="40" max="100">40%</progress>
           <th>05. Aca se importa de la BDD el siguiente</th>
-          <progress class="progress is-danger" value="20" max="100">20%</progress>
+          <progress className="progress is-danger" value="20" max="100">20%</progress>
           </div>
 </div>
-<div class="box">
-        <div class="column">
+<div className="box">
+        <div className="column">
             Tiros al Arco
-           <figure class="image is-64x64">
+           <figure className="image is-64x64">
            <img src={Logo} alt="Logo" />
             </figure>
             <hr></hr>
             <th>01. Benzema</th>
-            <progress class="progress is-primary" value="100" max="100">100%</progress>
+            <progress className="progress is-primary" value="100" max="100">100%</progress>
             <th>02. Aca se importa de la BDD el siguiente</th>
-            <progress class="progress is-link" value="80" max="100">80%</progress>
+            <progress className="progress is-link" value="80" max="100">80%</progress>
             <th>03. Aca se importa de la BDD el siguiente</th>
-            <progress class="progress is-success" value="60" max="100">60%</progress>
+            <progress className="progress is-success" value="60" max="100">60%</progress>
             <th>04. Aca se importa de la BDD el siguiente</th>
-            <progress class="progress is-warning" value="40" max="100">40%</progress>
+            <progress className="progress is-warning" value="40" max="100">40%</progress>
             <th>05. Aca se importa de la BDD el siguiente</th>
-            <progress class="progress is-danger" value="20" max="100">20%</progress>
+            <progress className="progress is-danger" value="20" max="100">20%</progress>
             </div>
 </div>
 
-<div class="box">
-<div class="column">
+<div className="box">
+<div className="column">
   Pases Concretados
-  <figure class="image is-64x64">
+  <figure className="image is-64x64">
   <img src={Logo} alt="Logo" />
 </figure>
 <hr></hr>
 <th>01. Benzema</th>
-<progress class="progress is-primary" value="100" max="100">100%</progress>
+<progress className="progress is-primary" value="100" max="100">100%</progress>
 <th>02. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-link" value="80" max="100">80%</progress>
+<progress className="progress is-link" value="80" max="100">80%</progress>
 <th>03. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-success" value="60" max="100">60%</progress>
+<progress className="progress is-success" value="60" max="100">60%</progress>
 <th>04. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-warning" value="40" max="100">40%</progress>
+<progress className="progress is-warning" value="40" max="100">40%</progress>
 <th>05. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-danger" value="20" max="100">20%</progress>
+<progress className="progress is-danger" value="20" max="100">20%</progress>
 </div>
 </div>
 
-<div class="box">
-<div class="column">
+<div className="box">
+<div className="column">
   Asistidores
-  <figure class="image is-64x64">
+  <figure className="image is-64x64">
   <img src={Logo} alt="Logo" />
 </figure>
 <hr></hr>
 <th>01. Benzema</th>
-<progress class="progress is-primary" value="100" max="100">100%</progress>
+<progress className="progress is-primary" value="100" max="100">100%</progress>
 <th>02. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-link" value="80" max="100">80%</progress>
+<progress className="progress is-link" value="80" max="100">80%</progress>
 <th>03. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-success" value="60" max="100">60%</progress>
+<progress className="progress is-success" value="60" max="100">60%</progress>
 <th>04. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-warning" value="40" max="100">40%</progress>
+<progress className="progress is-warning" value="40" max="100">40%</progress>
 <th>05. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-danger" value="20" max="100">20%</progress>
+<progress className="progress is-danger" value="20" max="100">20%</progress>
 </div>
 </div>
 
-<div class="box">
-<div class="column">
+<div className="box">
+<div className="column">
   Recuperaciones
-  <figure class="image is-64x64">
+  <figure className="image is-64x64">
   <img src={Logo} alt="Logo" />
 </figure>
 <hr></hr>
 <th>01. Benzema</th>
-<progress class="progress is-primary" value="100" max="100">100%</progress>
+<progress className="progress is-primary" value="100" max="100">100%</progress>
 <th>02. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-link" value="80" max="100">80%</progress>
+<progress className="progress is-link" value="80" max="100">80%</progress>
 <th>03. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-success" value="60" max="100">60%</progress>
+<progress className="progress is-success" value="60" max="100">60%</progress>
 <th>04. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-warning" value="40" max="100">40%</progress>
+<progress className="progress is-warning" value="40" max="100">40%</progress>
 <th>05. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-danger" value="20" max="100">20%</progress>
+<progress className="progress is-danger" value="20" max="100">20%</progress>
 </div>
 </div>
 
-<div class="box">
-<div class="column">
+<div className="box">
+<div className="column">
   Salvadas
-  <figure class="image is-64x64">
+  <figure className="image is-64x64">
   <img src={Logo} alt="Logo" />
 </figure>
 <hr></hr>
 <th>01. Benzema</th>
-<progress class="progress is-primary" value="100" max="100">100%</progress>
+<progress className="progress is-primary" value="100" max="100">100%</progress>
 <th>02. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-link" value="80" max="100">80%</progress>
+<progress className="progress is-link" value="80" max="100">80%</progress>
 <th>03. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-success" value="60" max="100">60%</progress>
+<progress className="progress is-success" value="60" max="100">60%</progress>
 <th>04. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-warning" value="40" max="100">40%</progress>
+<progress className="progress is-warning" value="40" max="100">40%</progress>
 <th>05. Aca se importa de la BDD el siguiente</th>
-<progress class="progress is-danger" value="20" max="100">20%</progress>
+<progress className="progress is-danger" value="20" max="100">20%</progress>
             </div>
           </div>
         </div>

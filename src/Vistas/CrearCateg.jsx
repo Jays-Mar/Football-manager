@@ -4,18 +4,18 @@ import { /*BrowserRouter as Router,*/  Route, Routes, Link} from "react-router-d
 
 const categ = () => 
 
-<div class="hero is-primary is-fullheight">
-<section class="section">
+<div className="hero is-primary is-fullheight">
+<section className="section">
     
-   <div class="container is-2">
-   <div class="columns is-left">
-  <div class="column is-6"> 
-    <p class="title is-2">Crear categoría</p>
-                <form class="box">
-  <div class="field">
-    <label class="label">Año:</label>
-    <div class="field">
-  <div class="select">
+   <div className="container is-2">
+   <div className="columns is-left">
+  <div className="column is-6"> 
+    <p className="title is-2">Crear categoría</p>
+                <form className="box">
+  <div className="field">
+    <label className="label">Año:</label>
+    <div className="field">
+  <div className="select">
   <select>
     <option value="Sub07">Sub 07</option>
     <option value="Sub08">Sub 08</option>
@@ -27,10 +27,10 @@ const categ = () =>
   </div>
   </div>
 
-  <div class="field">
-    <label class="label">Cantidad de equipos:</label>
-    <div class="field">
-  <div class="select">
+  <div className="field">
+    <label className="label">Cantidad de equipos:</label>
+    <div className="field">
+  <div className="select">
   <select>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -52,10 +52,10 @@ const categ = () =>
   </div>
   </div>
 
-  <div class="field">
-  <label class="label">Seleccionar equipos:</label>
-    <div class="field">
-  <div class="select is-multiple">
+  <div className="field">
+  <label className="label">Seleccionar equipos:</label>
+    <div className="field">
+  <div className="select is-multiple">
   <select>
     <option>Equipos</option>
     <option value="MENCA SPORT">MENCA SPORT</option>
@@ -94,7 +94,7 @@ const categ = () =>
 
   </div>
 
-  <button class="button is-primary">Guardar</button>
+  <button className="button is-primary">Guardar</button>
 </form>
              </div>
          </div>

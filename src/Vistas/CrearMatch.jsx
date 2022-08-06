@@ -2,18 +2,18 @@ import React from 'react'
 
 const match = () => 
 
-<div class="hero is-primary is-fullheight">
-<section class="section">
+<div className="hero is-primary is-fullheight">
+<section className="section">
     
-   <div class="container">
-   <div class="columns is-left">
-  <div class="column is-6"> 
-    <p class="title is-2">Crear partido</p>
-                <form class="box">
-                <div class="field">
-    <label class="label">Escoger categoría:</label>
-    <div class="field">
-  <div class="select">
+   <div className="container">
+   <div className="columns is-left">
+  <div className="column is-6"> 
+    <p className="title is-2">Crear partido</p>
+                <form className="box">
+                <div className="field">
+    <label className="label">Escoger categoría:</label>
+    <div className="field">
+  <div className="select">
   <select>
   <option value="Sub07">Sub 07</option>
     <option value="Sub08">Sub 08</option>
@@ -24,10 +24,10 @@ const match = () =>
 </div>
   </div>
   </div>
-  <div class="field">
-    <label class="label">Escoger grupo:</label>
-    <div class="field">
-  <div class="select">
+  <div className="field">
+    <label className="label">Escoger grupo:</label>
+    <div className="field">
+  <div className="select">
   <select>
     <option value="A">A</option>
     <option value="B">B</option>
@@ -39,10 +39,10 @@ const match = () =>
   </div>
 
 
-  <div class="field">
-  <label class="label">Seleccionar equipos:</label>
-    <div class="field">
-  <div class="select is-multiple">
+  <div className="field">
+  <label className="label">Seleccionar equipos:</label>
+    <div className="field">
+  <div className="select is-multiple">
   <select>
     <option>Equipos</option>
     <option value="MENCA SPORT">MENCA SPORT</option>
@@ -61,7 +61,7 @@ const match = () =>
     <option value="DYNAMO MARGARITA">DYNAMO MARGARITA</option>
   </select>
   </div>
-  <div class="select is-multiple">
+  <div className="select is-multiple">
   <select>
     <option>Equipos</option>
     <option value="MENCA SPORT">MENCA SPORT</option>
@@ -99,10 +99,10 @@ const match = () =>
 
 
   </div>
-  <div class="field">
-    <label class="label">Escoger jornada:</label>
-    <div class="field">
-  <div class="select">
+  <div className="field">
+    <label className="label">Escoger jornada:</label>
+    <div className="field">
+  <div className="select">
   <select>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -113,10 +113,10 @@ const match = () =>
   </div>
   </div>
 
-  <div class="field">
-    <label class="label">Escoger campo:</label>
-    <div class="field">
-  <div class="select">
+  <div className="field">
+    <label className="label">Escoger campo:</label>
+    <div className="field">
+  <div className="select">
   <select>
   <option value="SEDE MENCA">SEDE MENCA</option>
     <option value="URB. BRISA DEL MAR">URB. BRISA DEL MAR</option>
@@ -125,7 +125,7 @@ const match = () =>
   </div>
   </div>
 
-  <button class="button is-primary">Guardar</button>
+  <button className="button is-primary">Guardar</button>
 </form>
              </div>
          </div>
